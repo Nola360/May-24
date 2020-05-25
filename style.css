@@ -14,7 +14,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* background: yellow; */
 }
 
 h2 {
@@ -22,7 +21,6 @@ h2 {
   font-weight: 600;
   text-align: center;
   width: 350px;
-  /* background: green; */
   padding: 3px;
 }
 
@@ -38,7 +36,7 @@ h2 {
 
 
 .email_icon_field {
-  border: 2px solid rgb(240, 78, 78);
+  border: 2px solid rgb(172, 172, 172);
   border-radius: 8px;
   outline: none;
   min-height: 60px;
@@ -48,6 +46,16 @@ h2 {
   justify-content: space-between;
   padding: 4px 20px 4px 10px;
 }
+
+.email_icon_field.active {
+    border: 2px solid rgb(240, 78, 78);
+}
+
+.email_icon_field.valid {
+    border: 2px solid rgb(41, 185, 77);
+}
+
+
 
 input {
   border: none;
@@ -61,6 +69,26 @@ input {
 .email_icon_field .fas.fa-exclamation-circle {
   font-size: 30px;
   color: rgb(240, 78, 78);
+  display: none;
+}
+
+.email_icon_field .fas.fa-check {
+  font-size: 30px;
+  color: rgb(41, 185, 77);
+  display: none;
+}
+
+.email_icon_field .fas.fa-check.active {
+  font-size: 30px;
+  color: rgb(41, 185, 77);
+  display: flex;
+  
+}
+
+.email_icon_field .fas.fa-exclamation-circle.active {
+  font-size: 30px;
+  color: rgb(240, 78, 78);
+  display: flex
 }
 
 
@@ -78,15 +106,53 @@ input {
   text-transform: capitalize;
   font-size: 18px;
   letter-spacing: .5px;
+ display: none
+  
+}
+
+.message_container.active {
+  display: flex;
+}
+
+.accent.valid {
+  background: rgb(41, 185, 77);
+ display: flex;
+}
+
+.message_container.valid {
+  display: flex;
+  background: rgb(41, 185, 77);
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;;
+}
+
+
+.message_container p:nth-child(3) {
+  color: #fff;
+  display: none;
+}
+
+.message_container p:nth-child(2).invalid {
+  color: #fff;
+  display: none;
+}
+
+
+
+
+.message_container p:nth-child(3).valid {
+  color: #fff;
+  display: flex;
 }
 
 .accent {
-  position: relative;
-  top: -30px;
-  left: 318px;
+  position: absolute;
+  top: 54.12%;
+  left: 57.65%;
   background-color: rgba(240, 78, 78);
   height: 25px;
   width: 25px;
   transform: rotate(45deg);
-  
 }
